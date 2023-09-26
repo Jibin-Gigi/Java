@@ -1,6 +1,6 @@
 
 /******************************************************************************************
- * File				:	Sum_of_Two_Numbers.java
+ * File		  :	Sum_of_Two_Numbers.java
  * Description      :   Find sum of Two Numbers
  * Author           :   Jibin Gigi
  * Version          :   1.0
