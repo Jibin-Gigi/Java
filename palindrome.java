@@ -1,8 +1,8 @@
 /**********************************************************************************************************************************************************
  * File							:		Palindrome.java
- * Description					: 		To check whether a string is palindrome or not
- * Author 						:		Jibin Gigi
- * Version						:		1.0
+ * Description					      : 		To check whether a string is palindrome or not
+ * Author 						      :		Jibin Gigi
+ * Version						      :		1.0
  * Date							:		03/10/23
  **************************************************************************************************************************************************************/
 
