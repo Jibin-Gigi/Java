@@ -1,3 +1,10 @@
+/****************************************************************************************************************************************************
+ * File                                                         : charFrequency
+ * Description                                                  : Java program to find frequency of a character in a string
+ * Author                                                       : Jibin Gigi
+ * Version                                                      : 1.0
+ * Date                                                         : 9/10/23
+ *************************************************************************************************************************************************/
 import java.util.Scanner;
 public class charFrequency {
     public static void main(String[] args){
