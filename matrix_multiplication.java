@@ -64,8 +64,8 @@ public class matrix_multiplication {
 	       int [][]result=new int[row][column2];
 	       for(int i=0;i<row;i++) {
 	    	   for(int j=0;j<column2;j++) {
+			    result[i][j]=0;
 	    		   for(int k=0;k<column;k++) {
-				   result[i][j]=0;
 	    			   result[i][j]+=array1[i][k]*array2[k][j];
 	    		   }
 	    	   }
