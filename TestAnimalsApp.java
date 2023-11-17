@@ -1,4 +1,4 @@
-public class TestAnimalsApp {
+public class TestAnimals {
     public static void main(String[] args) {
         Fish fish = new Fish();
         Cat cat = new Cat();
