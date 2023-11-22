@@ -21,7 +21,7 @@ public class palindrome {
     		  System.out.println("The Given String is Not Palidrome");
     	  }
     	 
-    	    
+    	  sc.close();
     	  
     	  
       }
@@ -34,7 +34,7 @@ public class palindrome {
     		  }
     	  }
     	  return true;
-    	  sc.close();
+    	  
       }
 
 }
