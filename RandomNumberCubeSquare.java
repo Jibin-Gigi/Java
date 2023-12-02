@@ -29,6 +29,7 @@ class NumberManager{
 		numberGenerated=new Random().nextInt(100)+1;   //Upto 99 from 1
 		System.out.println("The number generated is : "+numberGenerated);
 		generationStatus=true;
+		notifyAll();
 	}
 	
 	synchronized public void EvenNumberSquare() throws InterruptedException {
@@ -38,7 +39,7 @@ class NumberManager{
 		else {
 			System.out.println("The square of the "+numberGenerated+ " : "+numberGenerated*numberGenerated);
 			generationStatus=false;
-			notifyAll();
+			
 			
 		}
 	}
@@ -56,7 +57,7 @@ class NumberManager{
 
 
 class SquareThread extends Thread{
-	NumberManager square=new NumberManager();
+	private  NumberManager square=new NumberManager();
 	
 	SquareThread(NumberManager square) {
 		this.square=square;
@@ -73,7 +74,7 @@ class SquareThread extends Thread{
 	}
 }
 class OddThread extends Thread{
-	NumberManager cube=new NumberManager();
+   	private NumberManager cube=new NumberManager();
      
 	
 	OddThread(NumberManager cube) {
