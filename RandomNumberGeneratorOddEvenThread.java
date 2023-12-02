@@ -24,7 +24,7 @@ class numberManager{
 	
 	synchronized public void generateNumber() {
 		
-		generatedNumber= new Random().nextInt(99)+2;   //Random number generates from 1
+		generatedNumber= new Random().nextInt(99)+1;   //Random number generates from 1
 		System.out.println("The generated random number is: "+generatedNumber);
 		numberGeneration=true; 
 		notifyAll();
