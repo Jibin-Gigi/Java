@@ -79,7 +79,7 @@ class Cat extends Animal implements Pet {
     }
 
     Cat() {
-        this("Unknown");
+        this(" ");
     }
 
     @Override
