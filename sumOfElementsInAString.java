@@ -10,6 +10,7 @@ public class sumOfElementsInAString {
 		StringTokenizer  object=new StringTokenizer(sc.nextLine());
 		while(object.hasMoreElements()) {
 			int data=Integer.parseInt(object.nextToken());
+			System.out.println(data+"  ");
 			sum=sum+data;
 		}
 		System.out.println("The sum of numbers in string="+sum);
