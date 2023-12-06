@@ -1,3 +1,12 @@
+*************************************************************************************************************
+ * File                               : TestAnimals.java
+ * Description                        : Java program to illustrate Interface
+ * Author                             : Jibin Gigi
+ * Version                            : 1.0
+ * Date                               : 03/11/23
+************************************************************************************************************/
+
+
 public class TestAnimals {
     public static void main(String[] args) {
         Fish fish = new Fish();
