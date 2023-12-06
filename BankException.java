@@ -34,13 +34,15 @@ public class BankException {
 
             switch (choice) {
                 case 1:
-                    
+                    System.out.println();
                     for (int i = 0; i < noOfCustomers; i++) {
+                        System.out.println("Customer "+(i+1));
                         customer[i].getCustomerDetails();
                     }
+                    System.out.println();
                     break;
                 case 2:
-                    
+                    System.out.println();
                     System.out.println("Enter the account number");
                     int searchAccount = sc.nextInt();
                     boolean accountFound = false;
@@ -54,15 +56,17 @@ public class BankException {
                     if (!accountFound) {
                         System.out.println("Account not found.");
                     }
+                    System.out.println();
                     break;
                 case 3: 
+                    System.out.println();
                     System.out.println("Enter the account number");
                     int depositAccount = sc.nextInt();
                     boolean depositAccountFound = false;
                     for (int i = 0; i < noOfCustomers; i++) {
                     	 try {
                         if (customer[i].accountNumber == depositAccount) {
-                        	
+                                depositAccountFound = true;
                                  System.out.println("Enter the amount to deposit");
                                  int depositAmount = sc.nextInt();
                                  if (depositAmount < 0) {
@@ -71,7 +75,7 @@ public class BankException {
                                  else {
                                 	 customer[i].accountBalance += depositAmount;
                                      customer[i].getCustomerDetails();
-                                     depositAccountFound = true;
+                                     
                                      
                                  }
                         	 }
@@ -83,18 +87,21 @@ public class BankException {
                     }
                     if(depositAccountFound == false)
                         System.out.println("Account not found");
+                    System.out.println();
                     break;
                         
                     
        
                     
                 case 4:  
+                    System.out.println();
                 	System.out.println("Enter the account number");
                 	searchAccount = sc.nextInt();
                     boolean withdrawAccountFound = false;
                 	for (int i = 0; i < noOfCustomers; i++) {
                 		try {
                         if (customer[i].accountNumber == searchAccount) {
+                            withdrawAccountFound = true;
                         	System.out.println("Enter the amount to withdraw");
                             int withdrawAmount = sc.nextInt();
                             	if (withdrawAmount <= 0) {
@@ -105,7 +112,7 @@ public class BankException {
                                 } else {
                                     customer[i].accountBalance = customer[i].accountBalance - withdrawAmount;
                                     customer[i].getCustomerDetails();
-                                    withdrawAccountFound = true;
+                                    
                                 }
                             	
                         }
@@ -117,14 +124,17 @@ public class BankException {
                 	}
                     if(withdrawAccountFound == false)
                         System.out.println("Account not found");
-                   	
+                   	System.out.println();
                     break; 
-         
+                case 5:
+                    System.out.println();
+                    System.out.println("Program ends");
+                    break;
                     
                 default:
                     System.out.println("Invalid choice");
             }
-        } while (choice < 5);
+        } while (choice < =5);
         sc.close();
     }
 }
@@ -147,7 +157,7 @@ class Customers {
     int accountNumber;
     String accountType;
     String customerName;
-    int accountBalance;
+    double accountBalance;
 
     public void setCustomerDetails(Scanner sc) {
         System.out.println("Enter the Account Number");
@@ -157,7 +167,7 @@ class Customers {
         System.out.println("Enter the Customer Name");
         customerName = sc.next();
         System.out.println("Enter the  Balance");
-        accountBalance = sc.nextInt();
+        accountBalance = sc.nextDouble();
     }
 
     public void getCustomerDetails() {
