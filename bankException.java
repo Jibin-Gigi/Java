@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class bankException {
+public class BankException {
 		public static void main(String[] args) {
 			int i=0;
 			Scanner sc=new Scanner(System.in);
@@ -8,15 +8,16 @@ public class bankException {
 			Customer [] customer=new Customer[numberOfCustomers];
 			for(i=0;i<numberOfCustomers;i++) {
 				customer[i]= new Customer();
+                System.out.println("Enter details of Customer "+(i+1));
 				customer[i].customerDetails();
 			}
 			for(i=0;i<numberOfCustomers;i++) {
+                System.out.println("Details of Customer "+(i+1));
 				customer[i].printDetails();
 			}
 			Bank bank = new Bank(); 
 			bank.functions(customer,numberOfCustomers);
-			/*object array*/
-			//Class [] class =new Class [value]();
+			
 			
 			sc.close();
 		}
@@ -50,12 +51,11 @@ class Customer{
 		
 	}
 	void printDetails() {
-		System.out.println("________________________________");
-		System.out.println("________________________________");
 		System.out.println("Name of account holder : "+name);
 		System.out.println("Account number : "+acc_no);
 		System.out.println("Account type : "+acc_type);
 		System.out.println("Balance : "+balance);
+        System.out.println("________________________________");
 	}
 	
 	
@@ -73,19 +73,23 @@ class Bank  extends Customer{
 		choice=sc.nextInt();
 		switch(choice) {
 				case 1 :{
+                    System.out.println("________________________________");
 					for(int i=0;i<numberOfCustomers;i++) {
 					customer[i].printDetails();
 					}
 					break;
 				}
 				case 2 :{
-					System.out.println("Enter the Account No. to be selected: ");
+					System.out.println("Enter the Account No. to be searched: ");
 					value=sc.nextDouble();	
 					System.out.println();
 					for(int i=0;i<numberOfCustomers;i++) {
 					if(value==customer[i].acc_no) {
-						printDetails();	
+						customer[i].printDetails();	
 					}
+                    else{
+
+                    }
 					}
 					break;
 				}
