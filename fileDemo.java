@@ -4,7 +4,7 @@ import java.io.IOException;
 public class fileDemo {
 	public static void main(String[] args) {
 		String str="I am Inevitable";
-		char [] data=new char[50];
+		char [] data1=new char[50];
 		FileWriter input=null;
 		FileWriter output=null;
 		FileReader string=null;
@@ -15,9 +15,9 @@ public class fileDemo {
 			input.flush();
 			input.close();
 			string=new FileReader("inputfile.txt");
-			int size=string.read(data);
+			int size=string.read(data1);
 			string.close();
-			output.write(data,0,size);
+			output.write(data1,0,size);
 			output.flush();
 			output.close();
 			
