@@ -1,3 +1,15 @@
+/*************************************************************************************************************************
+ * File		    :   Doubly LinkedList Experiment
+ * Description      :   Java program for the following: 
+ 			   1) Create a doubly linked list of elements. 
+			   2) Delete a given element from the above list. 
+			   3) Display the contents of the list after deletion.
+ * Author           :   Jibin Gigi
+ * Version          :   1.0
+ * Date             :   08/12/23
+**************************************************************************************************************************/
+
+
 import java.util.LinkedList;
 import java.util.Scanner;
 import java.lang.IndexOutOfBoundsException;
