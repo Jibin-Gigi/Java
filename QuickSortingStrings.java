@@ -1,3 +1,11 @@
+/******************************************************************************************
+ * File		    :   Quick Sorting Strings
+ * Description      :   Java program that implements Quick sort algorithm for sorting a list of names in ascending order.
+ * Author           :   Jibin Gigi
+ * Version          :   1.0
+ * Date             :   08/12/23
+***********************************************************************************************/
+
 import java.util.Scanner;
 
 public class QuickSortingStrings {
