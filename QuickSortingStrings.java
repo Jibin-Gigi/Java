@@ -1,5 +1,5 @@
 /*************************************************************************************************************************
- * File		    :   Quick Sorting Strings
+ * File		    :   QuickSortingStrings.java
  * Description      :   Java program that implements Quick sort algorithm for sorting a list of names in ascending order.
  * Author           :   Jibin Gigi
  * Version          :   1.0
