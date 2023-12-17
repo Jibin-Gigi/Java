@@ -7,47 +7,57 @@
  * Version          :   1.0
  * Date             :   13/12/23
 **************************************************************************************************************************/
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+// TrafficLightSimulator class extends JFrame and implements ActionListener
 public class TrafficLightSimulator extends JFrame implements ActionListener {
     private JRadioButton redButton, yellowButton, greenButton;
     private TrafficLightPanel lightPanel;
 
+    // Constructor for TrafficLightSimulator
     public TrafficLightSimulator() {
         setTitle("Traffic Light Simulator");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(200, 400);
         setLayout(new BorderLayout());
 
+        // Create radio buttons for traffic light colors
         redButton = new JRadioButton("Red");
         yellowButton = new JRadioButton("Yellow");
         greenButton = new JRadioButton("Green");
 
+        // Group the radio buttons
         ButtonGroup buttonGroup = new ButtonGroup();
         buttonGroup.add(redButton);
         buttonGroup.add(yellowButton);
         buttonGroup.add(greenButton);
 
+        // Add action listeners to the radio buttons
         redButton.addActionListener(this);
         yellowButton.addActionListener(this);
         greenButton.addActionListener(this);
 
+        // Create control panel and add radio buttons
         JPanel controlPanel = new JPanel();
         controlPanel.add(redButton);
         controlPanel.add(yellowButton);
         controlPanel.add(greenButton);
 
+        // Create TrafficLightPanel
         lightPanel = new TrafficLightPanel();
 
+        // Add components to the frame
         add(controlPanel, BorderLayout.NORTH);
         add(lightPanel, BorderLayout.CENTER);
 
         setVisible(true);
     }
 
+    // ActionListener method to handle button clicks
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == redButton) {
             lightPanel.setColors(Color.RED, Color.LIGHT_GRAY, Color.LIGHT_GRAY);
@@ -58,19 +68,23 @@ public class TrafficLightSimulator extends JFrame implements ActionListener {
         }
     }
 
+    // Main method to create an instance of TrafficLightSimulator
     public static void main(String[] args) {
         SwingUtilities.invokeLater(TrafficLightSimulator::new);
     }
 }
 
+// TrafficLightPanel class extends JPanel
 class TrafficLightPanel extends JPanel {
     private Color color1, color2, color3;
 
+    // Constructor for TrafficLightPanel
     public TrafficLightPanel() {
         setPreferredSize(new Dimension(120, 350));
         setColors(Color.LIGHT_GRAY, Color.LIGHT_GRAY, Color.LIGHT_GRAY);
     }
 
+    // Method to set the colors of the traffic light
     public void setColors(Color c1, Color c2, Color c3) {
         color1 = c1;
         color2 = c2;
@@ -78,6 +92,7 @@ class TrafficLightPanel extends JPanel {
         repaint();
     }
 
+    // Override paintComponent to draw the traffic light
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -88,7 +103,7 @@ class TrafficLightPanel extends JPanel {
 
         // Draw the post
         g.setColor(Color.DARK_GRAY);
-        g.fillRect(postX-18, 0, postWidth+10, postHeight);
+        g.fillRect(postX - 18, 0, postWidth + 10, postHeight);
 
         // Draw the box around the lights
         int boxWidth = 80;
