@@ -1,3 +1,12 @@
+/*************************************************************************************************************************
+ * File		        :   TrafficLightSimulator.java
+ * Description      :   Write a Java program that simulates a traffic light. The program lets the user select one of
+                        three lights: red, yellow, or green. When a radio button is selected, the light is turned on,
+                        and only one light can be on at a time.No light is on when the program starts
+ * Author           :   Jibin Gigi
+ * Version          :   1.0
+ * Date             :   13/12/23
+**************************************************************************************************************************/
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
