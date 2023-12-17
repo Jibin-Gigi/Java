@@ -1,5 +1,5 @@
 /*************************************************************************************************************************
- * File		    :   Doubly LinkedList Experiment
+ * File		    :   DoublyLinkedListExperiment.java
  * Description      :   Java program for the following: 
  			   1) Create a doubly linked list of elements. 
 			   2) Delete a given element from the above list. 
