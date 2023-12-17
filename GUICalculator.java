@@ -1,16 +1,27 @@
+/*************************************************************************************************************************
+ * File		        :   GUICalculator.java
+ * Description      :   Write a Java program that works as a simple calculator. Arrange Buttons for digits and the
+                        + - * % operations properly. Add a text field to display the result.Handle any possible
+                        exceptions like divide by zero. Use Java Swing.
+ * Author           :   Jibin Gigi
+ * Version          :   1.0
+ * Date             :   13/12/23
+**************************************************************************************************************************/
+
+
 import java.awt.event.*;
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
-class GUICalc extends JFrame implements ActionListener {
+class GUICalculator extends JFrame implements ActionListener {
     JButton numberButtons[] = new JButton[10];
     JButton addButton, subtractButton, multiplyButton, divideButton, equalsButton, clearButton;
     int operand1, operand2;
     char operator;
     JTextField resultField;
 
-    GUICalc() {
+    GUICalculator() {
     	setTitle("Calculator By Jibin");
         JFrame frame = new JFrame();
         frame.setTitle("Calculator By Jibin");
