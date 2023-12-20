@@ -7,7 +7,7 @@
 ************************************************************************************************************/
 
 
-public class TestAnimals {
+public class AnimalsInterface {
     public static void main(String[] args) {
         Fish fish = new Fish();
         Cat cat = new Cat();
