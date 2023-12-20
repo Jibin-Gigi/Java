@@ -1,5 +1,5 @@
 /*************************************************************************************************************
- * File                               : TestAnimals.java
+ * File                               : AnimalsInterface.java
  * Description                        : Java program to illustrate Interface
  * Author                             : Jibin Gigi
  * Version                            : 1.0
